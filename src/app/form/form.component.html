@@ -1,16 +1,22 @@
-<ng-template #content let-modal>
+<ng-template #content let-modal class="w-75">
     <div class="modal-header">
       <h4 class="modal-title" id="modal-basic-title">Add Quote</h4>
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body">
-      <form #quoteForm='ngForm'>
+      <form #quoteForm='ngForm' (ngSubmit)="createQuote(quoteForm)">
              
         <div class="mb-3">
             <label for="quotetitle">Enter quote-title</label>
 
             <input id="quotetitle"  class="form-control" name="title" ngModel>
             
+          </div>
+
+          <div class="form-floating">
+              
+            <textarea class="form-control" name="content" ngModel placeholder="Leave a quote here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Quote-content</label>
           </div>
           
 

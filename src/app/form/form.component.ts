@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -8,11 +9,14 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent {
+export class FormComponent implements OnInit {
+  @Output()quoteEvent=new EventEmitter<any>()
 
   closeResult = '';
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) {
+    
+  }
 
   open(content:any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
@@ -31,6 +35,15 @@ export class FormComponent {
       return `with: ${reason}`;
     }
   }
+  ngOnInit(): void {
+     
+  }
+
+  //creating form
+  createQuote(formd:NgForm){
+    this.quoteEvent.emit(formd.value)
+  }
+  
   
 
 }
