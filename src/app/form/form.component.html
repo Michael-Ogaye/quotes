@@ -1,14 +1,34 @@
 <ng-template #content let-modal>
     <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+      <h4 class="modal-title" id="modal-basic-title">Add Quote</h4>
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body">
-      <form>
+      <form #quoteForm='ngForm'>
+             
         <div class="mb-3">
-          <label for="dateOfBirth">Date of birth</label>
+            <label for="quotetitle">Enter quote-title</label>
+
+            <input id="quotetitle"  class="form-control" name="title" ngModel>
+            
+          </div>
+          
+
+          <div class="mb-3">
+            <label for="auth">Author</label>
+
+            <input id="auth"  class="form-control" name="author" ngModel>
+            
+          </div>
+
+
+
+
+          
+        <div class="mb-3">
+          <label for="dateOfBirth">Enter date</label>
           <div class="input-group">
-            <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+            <input id="dateOfBirth"  class="form-control" placeholder="yyyy-mm-dd" name="name" ngbDatepicker #dp="ngbDatepicker">
             <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
           </div>
         </div>
@@ -19,7 +39,7 @@
     </div>
   </ng-template>
   
-  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+  <button class="btn btn-lg btn-outline-danger" (click)="open(content)">Add Quote</button>
   
   <hr>
   
