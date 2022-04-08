@@ -2,6 +2,7 @@ import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { NgForm } from '@angular/forms';
+import { Quote } from '../quote';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  @Output()quoteEvent=new EventEmitter<any>()
+  @Output()quoteEvent=new EventEmitter<Quote>()
 
   closeResult = '';
 
@@ -41,7 +42,15 @@ export class FormComponent implements OnInit {
 
   //creating form
   createQuote(formd:NgForm){
-    this.quoteEvent.emit(formd.value)
+    
+    let formdata= formd.value;
+    let cDate=""+formdata.date.year+"-"+formdata.date.month+"-"+formdata.date.day+ ""
+
+    formdata.upVote=0;
+    formdata.downVote=0;
+    formdata.date= cDate;
+    console.log(formdata.date)
+    this.quoteEvent.emit(formdata);
   }
   
   
