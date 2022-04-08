@@ -1,0 +1,10 @@
+nav p span{
+    color: orangered;
+    display: inline-block;
+    transform: skewY(-5deg);
+}
+
+.imaga img{
+    width: 20vw;
+    height: 30vw;
+}
