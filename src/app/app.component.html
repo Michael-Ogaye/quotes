@@ -6,25 +6,38 @@
   </nav>
 
   <!-- the quotes template -->
-  <div class="quote">
+  <div *ngFor="let i of allQuotes" class="d-flex flex-column justify-content-evenly align-items-center">
       <div class="head">
-          <p>on <span></span></p>
+          <p>on <span>{{i.title}}</span></p>
 
       </div>
       <hr>
-      <div class="bod">
+      <div class="bod d-flex justify-content-evenly" >
           <div class="imgr imaga">
               <img src="../assets/images/left.svg" alt="left-quote">
           </div >
           <div class="cont">
+              <p class="fs-3 text-warning">{{i.content}}</p>
 
           </div>
           <div class="imgl imaga">
-              <img src="../assets/images/right.svg" alt="right-quote">
+              <img [src]="url1" >
           </div>
 
 
       </div>
+      
+      <div class="bot">
+          <p>-Author:{{i.author}}</p>
+          <div class="bts">
+              <button class="btn btn-primary ">upvote</button>
+              <span>{{i.upVote}}</span>
+              <button class="btn btn-success">Downvote</button>
+              <span>{{i.downVote}}</span>
+          </div>
+          <div class="dat">{{i.date}}</div>
+      </div>
+
 
 
   </div>
