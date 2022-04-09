@@ -12,3 +12,6 @@ nav p span{
 .imaga{
     flex: 1;
 }
+.bot p span{
+    color: orangered;
+}

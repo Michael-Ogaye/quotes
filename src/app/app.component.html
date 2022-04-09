@@ -23,7 +23,7 @@
           <div class="imgr imaga">
               <img src="../assets/images/right.svg" alt="left-quote">
           </div >
-          <div appHighlight class="cont">
+          <div  appHighlight = "allQuotes:false" class="cont p-5">
               <p class="fs-3 text-warning">{{i.content}}</p>
 
           </div>
@@ -34,15 +34,17 @@
 
       </div>
       
-      <div class="bot">
-          <p>-Author:{{i.author}}</p>
+      <div class="bot mt-3">
+          <p class="">-Author: <span class="fs-3">{{i.author}}</span> </p>
           <div class="bts ">
               <button (click)="upv(index)"  class="btn btn-success d-inline-block me-3 "> <i class="fa-solid fa-thumbs-up"></i> {{i.upVote}}</button>
               
-              <button (click)="downv(index)" class="btn btn-success">{{i.downVote}}</button>
+              <button (click)="downv(index)" class="btn btn-success"> <i class="fa-brands fa-facebook"></i>
+                {{i.downVote}}</button>
               
           </div>
-          <div class="dat">{{i.date}}</div>
+          <div class="dat justify-self-start text-start mt-3"> Date posted:
+              <br> {{i.date}}</div>
       </div>
 
       <br>

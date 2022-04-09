@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor(){
     this.log();
-    this.largestVote()
+    // this.largestVote()
   }
 
   allQuotes:Quote[]=[
@@ -59,9 +59,24 @@ downv(idx:number){
 }
 //upvotes array
 allups:number[]=[]
-largestVote(){
-  console.log(this.allQuotes.values)
-}
+// largestVote():boolean{
+//   let indicate=false;
+//   let largesno=this.allQuotes[0].upVote
+//   for(let c=0;c<this.allQuotes.length;c++){
+//     if(largesno<this.allQuotes[c].upVote){
+
+//       largesno=this.allQuotes[c].upVote;
+      
+//     }
+//   }
+//   if(largesno){
+//     indicate=true;
+
+//   }
+  
+//     return indicate;
+  
+// }
 
 
 }
