@@ -45,10 +45,11 @@ export class FormComponent implements OnInit {
     
     let formdata= formd.value;
     let cDate=""+formdata.date.year+"-"+formdata.date.month+"-"+formdata.date.day+ ""
+    let sdate= new Date(cDate);
 
     formdata.upVote=0;
     formdata.downVote=0;
-    formdata.date= cDate;
+    formdata.date= sdate;
     console.log(formdata.date)
     this.quoteEvent.emit(formdata);
   }

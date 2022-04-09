@@ -16,13 +16,13 @@ export class AppComponent {
 
   allQuotes:Quote[]=[
     new Quote(
-      'medicine','If life were predictable  it would cease to be life, and be without flavor.','Michael','2022-04-08',0,0,
+      'medicine','If life were predictable  it would cease to be life, and be without flavor.','Michael','Heather','2015-12-7',0,0,
     ),
     new Quote(
-      'medicine','If life were predictable  it would cease to be life, and be without flavor.','Michael','2022-04-08',0,0,
+      'Justice','If life were predictable  it would cease to be life, and be without flavor.','Lenah','Morrison','2000-04-08',0,0,
     ),
     new Quote(
-      'medicine','If life were predictable  it would cease to be life, and be without flavor.','Michael','2022-04-08',0,0,
+      'Money','If life were predictable  it would cease to be life, and be without flavor.','Anonymous','kyle','2022-01-02',0,0,
     )
     
     

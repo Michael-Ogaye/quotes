@@ -9,7 +9,7 @@
   </div>
 
   <!-- the quotes template -->
-  <div *ngFor="let i of allQuotes;index as index" class="d-flex w-50 mt-5 border round p-4 mx-auto bg-light flex-column justify-content-evenly align-items-center">
+  <div *ngFor="let i of allQuotes;index as index" class="d-flex w-50 mt-5 border round p-4 mx-auto bg-light flex-column justify-content-evenly align-items-ce">
       <div class="head  d-flex justify-content-around">
           <p class="text-muted me-5">on <span class="text-info fs-3">{{i.title}}</span></p>
           <div class="del">
@@ -36,15 +36,19 @@
       
       <div class="bot mt-3">
           <p class="">-Author: <span class="fs-3">{{i.author}}</span> </p>
-          <div class="bts ">
-              <button (click)="upv(index)"  class="btn btn-primary d-inline-block me-3 "> <i class="fa-solid fa-thumbs-up">upvote</i> <span class="text-light ms-3 fs-3">{{i.upVote}}</span></button>
+          <div class="bts mx-auto d-flex jusfify-content-around w-100 m-3 ">
+              <div><button (click)="upv(index)"  class="btn btn-primary d-inline-block me-3 "> <i class="fa-solid fa-thumbs-up">upvote</i> <span class="text-light ms-3 fs-3">{{i.upVote}}</span></button></div>
               
-              <button (click)="downv(index)" class="btn btn-success"> <i class="fa-brands fa-facebook"> downvote</i>
-                <span class="text-warning ms-2 fs-4">{{i.downVote}}</span></button>
+              <div><button (click)="downv(index)" class="btn btn-success"> <i class="fa-brands fa-facebook"> downvote</i>
+                <span class="text-warning ms-2 fs-4">{{i.downVote}}</span></button></div>
               
           </div>
-          <div class="dat justify-self-start text-start mt-3"> Date posted:
-              <br> {{i.date}}</div>
+          <div class="dat d-flex justify-content-between justify-self-start text-start mt-3">
+              <p> Date posted: <br>{{i.date}} <br><em class="text-info"> ~submitted by {{i.sub}}~</em></p>
+              <p>Time elasped <br> </p>
+
+
+               </div>
       </div>
 
       <br>

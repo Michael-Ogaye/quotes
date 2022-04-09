@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HighlightDirective } from './highlight.directive';
+import { DayelapsedPipe } from './dayelapsed.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    HighlightDirective
+    HighlightDirective,
+    DayelapsedPipe
   ],
   imports: [
     BrowserModule,
