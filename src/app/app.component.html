@@ -44,8 +44,8 @@
               
           </div>
           <div class="dat d-flex justify-content-between justify-self-start text-start mt-3">
-              <p> Date posted: <br>{{i.date}} <br><em class="text-info"> ~submitted by {{i.sub}}~</em></p>
-              <p>Time elasped <br> </p>
+              <p> Date posted: <br>{{i.date|date}} <br><em class="text-info"> ~submitted by {{i.sub}}~</em></p>
+              <p>Time elasped in days <br><span class="text-danger">{{i.date|dayelapsed}}</span> </p>
 
 
                </div>

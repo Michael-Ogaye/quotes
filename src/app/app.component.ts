@@ -16,13 +16,13 @@ export class AppComponent {
 
   allQuotes:Quote[]=[
     new Quote(
-      'medicine','If life were predictable  it would cease to be life, and be without flavor.','Michael','Heather','2015-12-7',0,0,
+      'medicine','If life were predictable  it would cease to be life, and be without flavor.','Michael','Heather',new Date('2015-12-7'),0,0,
     ),
     new Quote(
-      'Justice','If life were predictable  it would cease to be life, and be without flavor.','Lenah','Morrison','2000-04-08',0,0,
+      'Justice','If life were predictable  it would cease to be life, and be without flavor.','Lenah','Morrison',new Date('2000-4-08'),0,0,
     ),
     new Quote(
-      'Money','If life were predictable  it would cease to be life, and be without flavor.','Anonymous','kyle','2022-01-02',0,0,
+      'Money','If life were predictable  it would cease to be life, and be without flavor.','Anonymous','kyle',new Date('2022-01-02'),0,0,
     )
     
     
@@ -50,10 +50,36 @@ delete(ind:number){
 }
 upv(ind:number){
 this.allQuotes[ind].upVote +=1
+let audioctx=new AudioContext()
+
+  const oscillator= audioctx.createOscillator()
+  oscillator.connect(audioctx.destination);
+  oscillator.type='triangle'
+  oscillator.start()
+
+
+  setTimeout(function (){
+      oscillator.stop();
+
+  },500)
 
 }
 downv(idx:number){
   this.allQuotes[idx].downVote +=1
+
+  let audioctx=new AudioContext()
+
+  const oscillator= audioctx.createOscillator()
+  oscillator.connect(audioctx.destination);
+  oscillator.type='sine'
+  oscillator.start()
+
+
+  setTimeout(function (){
+      oscillator.stop();
+
+  },500)
+
 
 
 }
