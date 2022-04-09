@@ -4,6 +4,9 @@
         <p>Getting your quotes has never been easy</p>
     </div>
   </nav>
+  <div class="form mx-auto text-center mt-2">
+    <app-form (quoteEvent)="addQuote($event)"></app-form>
+  </div>
 
   <!-- the quotes template -->
   <div *ngFor="let i of allQuotes;index as index" class="d-flex w-50 mt-5 border round p-4 mx-auto bg-light flex-column justify-content-evenly align-items-center">
@@ -34,9 +37,9 @@
       <div class="bot">
           <p>-Author:{{i.author}}</p>
           <div class="bts ">
-              <button class="btn btn-success d-inline-block me-3 "> <i class="fa-solid fa-thumbs-up"></i> {{i.upVote}}</button>
+              <button (click)="upv(index)"  class="btn btn-success d-inline-block me-3 "> <i class="fa-solid fa-thumbs-up"></i> {{i.upVote}}</button>
               
-              <button class="btn btn-success">{{i.downVote}}</button>
+              <button (click)="downv(index)" class="btn btn-success">{{i.downVote}}</button>
               
           </div>
           <div class="dat">{{i.date}}</div>
@@ -49,4 +52,4 @@
   </div>
   
 
-  <app-form (quoteEvent)="addQuote($event)"></app-form>
+ 

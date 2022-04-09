@@ -43,8 +43,19 @@ log(){
 
 
 // deleting quotes
-delete(ind:any){
+delete(ind:number){
   this.allQuotes.splice(ind,1);
 
 }
+upv(ind:number){
+this.allQuotes[ind].upVote +=1
+
+}
+downv(idx:number){
+  this.allQuotes[idx].downVote +=1
+
+
+}
+
+
 }
