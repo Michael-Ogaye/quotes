@@ -11,6 +11,7 @@ export class AppComponent {
 
   constructor(){
     this.log();
+    this.largestVote()
   }
 
   allQuotes:Quote[]=[
@@ -55,6 +56,11 @@ downv(idx:number){
   this.allQuotes[idx].downVote +=1
 
 
+}
+//upvotes array
+allups:number[]=[]
+largestVote(){
+  console.log(this.allQuotes.values)
 }
 
 
