@@ -28,6 +28,14 @@
           </div>
 
 
+          <div class="mb-3">
+            <label for="sub">Submitted by:</label>
+
+            <input id="sub"  class="form-control" name="sub" ngModel>
+            
+          </div>
+
+
 
 
           
@@ -36,7 +44,7 @@
           <div class="input-group">
             <input id="dateOfBirth"  class="form-control" placeholder="yyyy-mm-dd" name="date" ngModel ngbDatepicker #dp="ngbDatepicker">
             
-            <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+            <button class="btn btn-outline-primary calendar" (click)="dp.toggle()" type="button">date</button>
           </div>
         </div>
         <button class=" btn btn-warning" type="submit">Submit</button>
