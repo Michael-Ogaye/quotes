@@ -6,9 +6,13 @@
   </nav>
 
   <!-- the quotes template -->
-  <div *ngFor="let i of allQuotes" class="d-flex w-75 mt-5 border round p-4 mx-auto bg-light flex-column justify-content-evenly align-items-center">
-      <div class="head">
-          <p>on <span>{{i.title}}</span></p>
+  <div *ngFor="let i of allQuotes;index as index" class="d-flex w-50 mt-5 border round p-4 mx-auto bg-light flex-column justify-content-evenly align-items-center">
+      <div class="head  d-flex justify-content-around">
+          <p class="text-muted me-5">on <span class="text-info fs-3">{{i.title}}</span></p>
+          <div class="del">
+              <button class="btn btn-danger" type="button" (click)="delete(index)">Delete</button>
+          </div>
+          
 
       </div>
       <hr>
@@ -29,11 +33,11 @@
       
       <div class="bot">
           <p>-Author:{{i.author}}</p>
-          <div class="bts">
-              <button class="btn btn-light "><i class="fa-solid fa-thumbs-up"></i></button>
-              <span>{{i.upVote}}</span>
-              <button class="btn btn-success">Downvote</button>
-              <span>{{i.downVote}}</span>
+          <div class="bts ">
+              <button class="btn btn-success d-inline-block me-3 "> <i class="fa-solid fa-thumbs-up"></i> {{i.upVote}}</button>
+              
+              <button class="btn btn-success">{{i.downVote}}</button>
+              
           </div>
           <div class="dat">{{i.date}}</div>
       </div>

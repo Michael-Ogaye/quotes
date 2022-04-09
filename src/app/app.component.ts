@@ -40,4 +40,11 @@ url1="../assets/images/right.svg"
 log(){
   console.log(this.allQuotes)
 }
+
+
+// deleting quotes
+delete(ind:any){
+  this.allQuotes.splice(ind,1);
+
+}
 }
