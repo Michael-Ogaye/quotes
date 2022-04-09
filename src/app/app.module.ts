@@ -8,13 +8,15 @@ import { FormComponent } from './form/form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HighlightDirective } from './highlight.directive';
 import { DayelapsedPipe } from './dayelapsed.pipe';
+import { QuoteDesComponent } from './quote-des/quote-des.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     HighlightDirective,
-    DayelapsedPipe
+    DayelapsedPipe,
+    QuoteDesComponent
   ],
   imports: [
     BrowserModule,
