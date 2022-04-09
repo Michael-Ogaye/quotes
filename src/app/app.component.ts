@@ -104,5 +104,9 @@ allups:number[]=[]
   
 // }
 
+toggledes(ind:number){
+  this.allQuotes[ind].showDes=! this.allQuotes[ind].showDes;
+}
+
 
 }

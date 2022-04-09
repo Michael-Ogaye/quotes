@@ -53,7 +53,8 @@
 
       <br>
       <hr>
-      <app-quote-des [quote]="i"></app-quote-des>
+      <button (click)="toggledes(index)" class="btn btn-outline-info">See details</button>
+      <app-quote-des *ngIf="i.showDes" [quote]="i"></app-quote-des>
 
       
       
