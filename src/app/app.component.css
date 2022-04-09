@@ -4,7 +4,11 @@ nav p span{
     transform: skewY(-5deg);
 }
 
-/* .imaga img{
-    width: 20vw;
-    height: 30vw;
-} */
+.imaga img{
+    width: 4vw;
+    height: 7vw;
+}
+
+.imaga{
+    flex: 1;
+}

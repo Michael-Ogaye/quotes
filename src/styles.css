@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-@import "~font-awesome/css/font-awesome.min.css";
+
 
 body{
     background-image: url('src/assets/images/hot.svg');
@@ -8,6 +8,9 @@ body{
     background-size: cover;
     background-color:rgb(175, 127, 175);
     background-blend-mode: saturation;
+}
+.cont{
+    align-self: center;
 }
 
 
