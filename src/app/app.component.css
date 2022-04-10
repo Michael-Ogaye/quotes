@@ -18,3 +18,15 @@ nav p span{
 .highlit{
     background-color: purple;
 }
+.tem{
+    width: 55%;
+}
+
+@media screen and (max-width:800px){
+    .tem{
+        width: 100%;
+        margin-top: -5vw;
+    }
+
+    
+}

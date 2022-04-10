@@ -16,13 +16,16 @@ export class AppComponent {
 
   allQuotes:Quote[]=[
     new Quote(
-      'medicine','If life were predictable  it would cease to be life, and be without flavor.','Michael','Heather',new Date('2015-12-7'),0,0,
+      'Life','If life were predictable  it would cease to be life, and be without flavor.','Michael','Heather',new Date('2019-12-7'),0,0,
     ),
     new Quote(
-      'Justice','If life were predictable  it would cease to be life, and be without flavor.','Lenah','Morrison',new Date('2000-4-08'),0,0,
+      'Justice','Whoever undertakes to set himself up as judge in the field of truth and knowledge is shipwrecked by the laughter of the Gods','Lenah','Cecil',new Date('2010-4-08'),0,0,
     ),
     new Quote(
-      'Money','If life were predictable  it would cease to be life, and be without flavor.','Anonymous','kyle',new Date('2022-01-02'),0,0,
+      'Money','Many people take no care of their money till they come nearly to the end of it, and others do just the same with their time. ','Anonymous','Thomas',new Date('2022-01-02'),0,0,
+    ),
+    new Quote(
+      'Universe','This is a cardboard universe, and if you lean too long or too heavily against it, you fall through ','Philip.K','Hellen',new Date('2005-06-27'),0,0,
     )
     
     
