@@ -37,7 +37,7 @@ The design for this website was done using pen hand paper getting inspiration fr
 * Angular-bootsraps
 ## The live link
 To get a demenonstration of the final deployment of my page please follow this link
-[live-link](https://michael-ogaye.github.io/magnas-pizzahub/)
+
 
   
 [Go Back to the top](#portfolio)
