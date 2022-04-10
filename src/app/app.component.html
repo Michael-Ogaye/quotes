@@ -13,7 +13,7 @@
       <div class="head  d-flex justify-content-around">
           <p class="text-muted me-5">on <span class="text-info fs-3">{{i.title}}</span></p>
           <div class="del">
-              <button class="btn btn-danger" type="button" (click)="delete(index)">Delete</button>
+              <button class="btn " type="button" (click)="delete(index)"><i class="fa-regular fa-trash-can fs-2 text-danger"></i></button>
           </div>
           
 
@@ -37,9 +37,9 @@
       <div class="bot mt-3">
           <p class="">-Author: <span class="fs-3">{{i.author}}</span> </p>
           <div class="bts mx-auto d-flex jusfify-content-around w-100 m-3 ">
-              <button (click)="upv(index)"  class="btn btn-primary d-inline-block me-3 "> <i class="fa-solid fa-thumbs-up">upvote</i> <span class="text-light ms-3 fs-3">{{i.upVote}}</span></button>
+              <button (click)="upv(index)"  class="btn btn-primary d-inline-block me-3 "> <i class="fa-solid fa-thumbs-up fs-2"></i> <span class="text-light ms-3 fs-3">{{i.upVote}}</span></button>
               
-              <button (click)="downv(index)" class="btn btn-success"> <i class="fa-brands fa-facebook"> downvote</i>
+              <button (click)="downv(index)" class="btn btn-success"> <i class="fa-solid fa-thumbs-down fs-2 text-danger"></i>
                 <span class="text-warning ms-2 fs-4">{{i.downVote}}</span></button>
               
           </div>
