@@ -9,7 +9,7 @@
   </div>
 
   <!-- the quotes template -->
-  <div *ngFor="let i of allQuotes;index as index" class="d-flex w-50 mt-5 border round p-4 mx-auto bg-light flex-column justify-content-evenly align-items-ce">
+  <div   *ngFor="let i of allQuotes;index as index"  class="d-flex w-50 mt-5 border round p-4 mx-auto bg-light flex-column justify-content-evenly align-items-ce">
       <div class="head  d-flex justify-content-around">
           <p class="text-muted me-5">on <span class="text-info fs-3">{{i.title}}</span></p>
           <div class="del">
@@ -19,12 +19,12 @@
 
       </div>
       <hr>
-      <div class="bod d-flex justify-content-evenly " >
+      <div appHighlight [display] = "largestVote()" class="bod d-flex justify-content-evenly " >
           <div class="imgr imaga">
               <img src="../assets/images/right.svg" alt="left-quote">
           </div >
-          <div  appHighlight = "allQuotes:false" class="cont p-5">
-              <p class="fs-3 text-warning">{{i.content}}</p>
+          <div   class="cont p-5">
+              <p class="fs-3 text-warning text-center">{{i.content}}</p>
 
           </div>
           <div class="imgl imaga">

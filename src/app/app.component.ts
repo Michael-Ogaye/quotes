@@ -85,24 +85,24 @@ downv(idx:number){
 }
 //upvotes array
 allups:number[]=[]
-// largestVote():boolean{
-//   let indicate=false;
-//   let largesno=this.allQuotes[0].upVote
-//   for(let c=0;c<this.allQuotes.length;c++){
-//     if(largesno<this.allQuotes[c].upVote){
+largestVote():object{
+  let indicate=false;
+  let largesno=this.allQuotes[0].upVote
+  for(let c=0;c<this.allQuotes.length;c++){
+    if(largesno<this.allQuotes[c].upVote){
 
-//       largesno=this.allQuotes[c].upVote;
+      largesno=this.allQuotes[c].upVote;
       
-//     }
-//   }
-//   if(largesno){
-//     indicate=true;
+    }
+  }
+  if(largesno){
+    indicate=true;
 
-//   }
+  }
   
-//     return indicate;
+    return {highlit:indicate};
   
-// }
+}
 
 toggledes(ind:number){
   this.allQuotes[ind].showDes=! this.allQuotes[ind].showDes;
