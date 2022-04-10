@@ -1,6 +1,9 @@
 # Portfolio
 ##### MICHAEL OGAYE
 ### Mic-Quotes
+## Screenshot
+![Quote](./src/assets/images/quote.png)
+
 ## Table of Content
 + [Description](#description)
 + [Design](Design)
@@ -25,12 +28,13 @@ The design for this website was done using pen hand paper getting inspiration fr
 ### Installation Process
 * The project is done in git initialized environment to enable one keep on saving his work on a remote repo
 ## Technology Used
-* Angular 13
+* Angular 13-this is an angular project,applying the concepts of OOP
 * The core part of this project was built using the vanilla HTML
 * The cascading stylesheet was used for styling purposes, diffrent styles were employed, such as the box model properties such as margin and padding, 
 * Javascript is used for inserting the script into our page, the script makes some logical decisions and displays back the result back to the user
 * Bootstrap has been largely used to style the page
 * The concepts of object oriented programming has been broadly applied
+* Angular-bootsraps
 ## The live link
 To get a demenonstration of the final deployment of my page please follow this link
 [live-link](https://michael-ogaye.github.io/magnas-pizzahub/)
